@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Copyright (C) 2017 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+-->
+
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="UnusedQuantity">
+    <string name="app_name">自动填充样本</string>
+    <string name="settings_name">自动填充设置</string>
+    <string name="navigation_button_custom_virtual_view_login_label">使用自定义虚拟视图的示例登录</string>
+    <string name="navigation_button_spinners_credit_card_label">使用 Spinner 进行信用卡结帐示例</string>
+    <string name="navigation_button_edittext_login_label">使用 EditTexts 登录示例</string>
+    <string name="navigation_button_autocomplete_login_label">使用 AutoCompleteTextView 进行简单登录</string>
+    <string name="navigation_button_email_compose_label">使用 EditTexts 撰写电子邮件示例</string>
+    <string name="navigation_button_compound_view_credit_card_label">使用复合视图的信用卡结账示例</string>
+    <string name="username_label">Username</string>
+    <string name="password_label">Password</string>
+    <string name="welcome_text">Success!</string>
+    <string name="standard_view_sign_in">使用标准视图登录</string>
+    <string name="standard_view_autocomplete_sign_in">使用标准视图登录
+        聚焦时触发自动完成对话框</string>
+    <string name="autofill_sign_in_prompt">点击即可登录.</string>
+    <string name="credit_card_number_label">CC Number</string>
+    <string name="credit_card_expiration_label">CC Exp</string>
+    <string name="credit_card_security_code_label">CC 安全码</string>
+    <string name="settings_cancel">取消</string>
+    <string name="settings_save">保存</string>
+    <string name="settings_authenticate_responses">验证响应</string>
+    <string name="settings_authenticate_datasets">验证数据集</string>
+    <string name="settings_clear_data_label">清除所有数据（包括凭证）</string>
+    <string name="settings_clear_data_confirmation">您确定要删除所有自动填充吗
+        来自示例服务的数据？
+    </string>
+    <string name="settings_clear_data_confirmation_title">确认</string>
+    <string name="ok">OK</string>
+    <string name="slash">/</string>
+    <string name="cancel">取消</string>
+    <string name="settings_authentication_header">验证</string>
+    <string name="settings_data_header">Data</string>
+    <string name="settings_auth_credentials_label">更新凭证</string>
+    <string name="settings_auth_enter_current_password">输入当前密码</string>
+    <string name="settings_auth_enter_new_password">输入新密码</string>
+    <string name="settings_auth_change_credentials_title">更改凭证</string>
+    <string name="clear_label">清除</string>
+    <string name="login_label">Login</string>
+    <string name="to_label">To</string>
+    <string name="body_label">Body</string>
+    <string name="autofill_master_login_label">Autofill Master Login</string>
+    <string name="submit_label">提交</string>
+    <string name="cc_exp_month_description">信用卡到期月份</string>
+    <string name="cc_exp_year_description">信用卡到期年份</string>
+    <string name="invalid_package_signature">包签名无效</string>
+    <string name="edittext_login_info">这是使用标准 EditText 的示例登录页面
+        来自 UI 工具包。 EditTexts 已经针对自动填充进行了优化，因此额外的自动填充特定
+        几乎从不需要代码。
+    </string>
+    <string name="autocomplete_login_info">这是一个示例登录页面，使用
+        AutoCompleteTextViews 而不是 EditTexts。自动完成对话框可能会
+        干扰自动填充对话框，因此有必要实现 AutofillCallback 来
+        当自动填充工作时禁用自动完成。
+    </string>
+    <string name="custom_virtual_login_info">这是一个使用自定义视图的示例登录页面
+        虚拟儿童。由于自动填充框架不知道如何自动填充虚拟
+        开箱即用的孩子，有必要实现某些特定于自动填充的方法和
+        直接与 AutofillManager 交互。
+    </string>
+    <string name="spinners_credit_card_info">这是一个示例信用卡结帐页面，使用
+        EditTexts 和 Spinners 将数据输入到表单中。虽然 EditTexts 被优化了
+        框，使用自定义阵列适配器时，旋转器可能需要少量工作。
+        在这种情况下，您需要告诉自动填充框架适配器中的哪些值映射到
+        哪些指数。
+    </string>
+    <string name="email_compose_info">
+        这是一个使用 EditTexts 撰写电子邮件的示例电子邮件撰写页面。由于没有一个
+        页面上的字段对于自动填充很重要，有必要设置
+        android:importForAutofill XML 属性适合每个视图。你可以设置它
+        对所有不可自动填充的视图设置为“no”，或设置“noExcludeDescendants”
+        如果层次结构中的所有视图不应自动填充，则在根视图上。在这种情况下，我们
+        做了后者。
+    </string>
+    <string name="compound_view_credit_card_info">
+        这是一个示例信用卡结帐页面，它使用自定义复合视图来输入信用额
+        卡的到期日期和用于输入信用卡号的 EditText。虽然 EditText 是
+        针对自动填充进行了开箱即用的优化，此示例展示了如何实现某些自动填充 -
+        自定义复合视图的特定方法和 XML 属性。
+    </string>
+    <plurals name="welcome_page_countdown">
+        <item quantity="one">%d秒后自动返回主页.</item>
+        <item quantity="other">%d 秒后自动返回主页.</item>
+    </plurals>
+    <string-array name="month_array">
+        <item>Jan</item>
+        <item>Feb</item>
+        <item>Mar</item>
+        <item>Apr</item>
+        <item>May</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Aug</item>
+        <item>Sep</item>
+        <item>Oct</item>
+        <item>Nov</item>
+        <item>Dec</item>
+    </string-array>
+
+    <string-array name="day_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>30</item>
+        <item>31</item>
+    </string-array>
+
+    <string-array name="mock_autocomplete_sign_in_suggestions">
+        <item>user-1</item>
+        <item>user-2</item>
+    </string-array>
+
+</resources>
