@@ -104,7 +104,7 @@
         android:layout_marginEnd="@dimen/spacing_normal"
         android:layout_marginStart="@dimen/spacing_normal"
         android:layout_marginTop="@dimen/spacing_normal"
-        android:autofillHints="password"
+        android:autofillHints="smsOTPCode"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="@+id/passwordLabel"
         app:layout_constraintEnd_toEndOf="parent"

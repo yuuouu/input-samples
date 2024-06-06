@@ -9,19 +9,21 @@ dependencies {
     implementation 'com.android.support:cardview-v7:26.0.1'
     implementation 'com.android.support:design:26.0.1'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-    implementation 'com.google.code.gson:gson:2.8.1'
+    implementation 'com.google.code.gson:gson:2.10.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+//    implementation 'androidx.autofill:autofill:1.1.0'
+
 }
 
 // The sample build uses multiple directories to
 // keep boilerplate and common code separate from
 // the main sample code.
-List<String> dirs = [
-        'main']     // main sample code; look here for the interesting stuff.
+List<String> dirs = ['main']     // main sample code; look here for the interesting stuff.
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
         minSdkVersion 26

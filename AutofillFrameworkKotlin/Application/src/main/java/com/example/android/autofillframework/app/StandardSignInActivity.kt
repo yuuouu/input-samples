@@ -20,6 +20,8 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.view.View
+import android.view.autofill.AutofillManager
 import android.widget.Toast
 import com.example.android.autofillframework.R
 import kotlinx.android.synthetic.main.login_activity.clear
@@ -33,6 +35,8 @@ class StandardSignInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_activity)
+        autofillManager = getSystemService(AutofillManager::class.java)!!
+
         login.setOnClickListener { login() }
         clear.setOnClickListener { resetFields() }
     }
@@ -62,15 +66,22 @@ class StandardSignInActivity : AppCompatActivity() {
      * Dummy implementation for demo purposes. A real service should use secure mechanisms to
      * authenticate users.
      */
-    fun isValidCredentials(username: String, password: String): Boolean {
+    private fun isValidCredentials(username: String, password: String): Boolean {
         return username == password
     }
 
     companion object {
-
         fun getStartActivityIntent(context: Context): Intent {
             val intent = Intent(context, StandardSignInActivity::class.java)
             return intent
+        }
+    }
+    private lateinit var autofillManager: AutofillManager
+
+    private fun refreshAutofill(view: View) {
+        if (autofillManager != null && autofillManager.isEnabled) {
+//            autofillManager.cancel();
+            autofillManager.requestAutofill(view)
         }
     }
 }
